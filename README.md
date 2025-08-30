@@ -37,6 +37,5 @@ java MazeSolver.Main
 ---
 
 # Future Updates
-- I am working on allowing the maze to properly generate visually even if the window is not large enough for your inputted dimensions.
 - I am working on animating the process in an optimized way so users can visually see the mazes being generated and solved step by step.
 
