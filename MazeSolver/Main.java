@@ -8,9 +8,10 @@ class Main {
         System.out.println("Welcome to the Maze Solver!");
         System.out.println("This program will solve a maze using Depth First Search (DFS).");
         System.out.println("You can either input a maze manually or generate a random maze.");
-        System.out.println("The maze will be solved and the solution path will be displayed with an @.");
-        System.out.println("I will begin by asking for the dimensions of the maze.");
+        System.out.println("The maze will be solved and the solution path will be displayed with an '.'.");
         System.out.println("For the best results, ensure your window is large enough for your inputted dimensions.\n");
+        System.out.println("I will begin by asking for the dimensions of the maze.");
+        
     
         int width = 0;
         int height = 0;
@@ -218,7 +219,7 @@ class Main {
         if (dfs(maze, startX, startY, visited)) {
             System.out.println("Maze Solution Path:");
             printMaze(maze);
-            return "Path marked with '@' in the maze.";
+            return "Path marked with '.' in the maze.";
         } else {
             return "No solution found!";
         }
@@ -234,7 +235,7 @@ class Main {
         }
 
         visited[x][y] = true;
-        maze[x][y] = '@';
+        maze[x][y] = '.';
   
         if (dfs(maze, x + 1, y, visited)) {
             return true;
@@ -254,3 +255,4 @@ class Main {
         return false;
     }
 }
+
